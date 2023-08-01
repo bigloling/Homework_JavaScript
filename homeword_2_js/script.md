@@ -193,7 +193,7 @@
     let userMonth = prompt("Введите номер месяца")
     let stopWord = 'Stop-Word'
 
-    while (userMonth > 12 || userMonth < 1) {
+    while ((userMonth > 12 || userMonth < 1) && userMonth != stopWord) {
         alert("Неверно введен номер месяца")
         userMonth = prompt("Введите номер месяца")
     }
