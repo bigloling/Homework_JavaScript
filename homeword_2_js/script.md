@@ -75,8 +75,8 @@ haveAllRequiredThings && haveFood ? shouldGoToWork : !shouldGoToWork
     let inputNum = prompt("Введите число: ")
 
     if (inputNum % 5 === 0 && inputNum % 3 === 0) alert("FizBuz")
-    else if (inputNum % 5 === 0 && inputNum % 3 !== 0) alert("Fiz")
-    else if (inputNum % 3 === 0 && inputNum % 5 !== 0) alert("Buz")
+    else if (inputNum % 5 === 0) alert("Fiz")
+    else if (inputNum % 3 === 0) alert("Buz")
     else alert("NoFizNoBuz")
 ```
 
