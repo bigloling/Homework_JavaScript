@@ -35,13 +35,11 @@
 #### Solution
 
 ```javascript
-    if (key === true && documents === true && pen === true) {
-        if (apple !== orange) {
-            console.log(shouldGoToWork = true)
-        } else {
-            console.log(shouldGoToWork = false)
-        }
-    } else shouldGoToWork = false
+let shouldGoToWork = true
+let haveAllRequiredThings = (key === true && documents === true && pen === true)
+let haveFood = (apple !== orange)
+
+haveAllRequiredThings && haveFood ? shouldGoToWork : !shouldGoToWork
 ```
 
 
