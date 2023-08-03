@@ -190,39 +190,50 @@
 #### Solution
 
 ```javascript
-    let userMonth = prompt("Введите номер месяца")
-    let stopWord = 'Stop-Word'
+    let userMonth = prompt("Введите номер месяlet userMonth = prompt("Введите номер месяца")
+let stopWord = 'Stop-Word'
 
-    while ((userMonth > 12 || userMonth < 1) && userMonth != stopWord) {
-        alert("Неверно введен номер месяца")
-        userMonth = prompt("Введите номер месяца")
-    }
+while ((userMonth > 12 || userMonth < 1) && userMonth !== stopWord) {
+    alert("Неверно введен номер месяца")
+    userMonth = prompt("Введите номер месяца")
+}
 
-    if (userMonth == stopWord) {
-        alert("Введено стоп-словоо")
-    } else {
-        switch (userMonth) {
-            case "1":
-            case "3":
-            case "5":
-            case "7":
-            case "8":
-            case "10":
-            case "12":
-                alert("31 день")
-                break
-            case "4":
-            case "6":
-            case "9":
-            case "11":
-                alert("30 дней")
-                break
-            case "2":
-                let userYear = prompt("Введите номер года: ")
-                if ((userYear % 4 === 0 && userYear % 100 !== 0) || userYear % 400 === 0) {
-                    alert("29 дней")
-                } else alert("28 дней")
-                break
+while (true) {
+    if (userMonth <= 12 && userMonth >= 1)
+        break
+    
+    alert("Неверно введен номер месяца")
+    userMonth = prompt("Введите номер месяца")
+}
+
+if (userMonth == stopWord) {
+    alert("Введено стоп-слово")
+    return
+}
+    
+switch (userMonth) {
+    case "1":
+    case "3":
+    case "5":
+    case "7":
+    case "8":
+    case "10":
+    case "12":
+        alert("31 день")
+        break
+    case "4":
+    case "6":
+    case "9":
+    case "11":
+        alert("30 дней")
+        break
+    case "2":
+        let userYear = prompt("Введите номер года: ")
+        if ((userYear % 4 === 0 && userYear % 100 !== 0) || userYear % 400 === 0) {
+            alert("29 дней")
+        } else { 
+            alert("28 дней")
+            break
         }
-    }
+}
 ```
