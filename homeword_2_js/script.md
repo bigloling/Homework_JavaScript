@@ -36,8 +36,8 @@
 
 ```javascript
 let shouldGoToWork = true
-let haveAllRequiredThings = (key === true && documents === true && pen === true)
-let haveFood = (apple !== orange)
+let haveAllRequiredThings = key && documents && pen
+let haveFood = apple || orange
 
 haveAllRequiredThings && haveFood ? shouldGoToWork : !shouldGoToWork
 ```
