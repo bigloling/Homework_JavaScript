@@ -35,11 +35,11 @@
 #### Solution
 
 ```javascript
-let shouldGoToWork = true
 let haveAllRequiredThings = key && documents && pen
 let haveFood = apple || orange
+let shouldGoToWork = haveAllRequiredThings && haveFood
 
-haveAllRequiredThings && haveFood ? shouldGoToWork : !shouldGoToWork
+console.log(shouldGoToWork)
 ```
 
 
