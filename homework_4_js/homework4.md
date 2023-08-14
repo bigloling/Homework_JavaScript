@@ -155,7 +155,7 @@ let getInfo = (obj) => obj === undefined ? "This value does not exist in the obj
 function makeProfile() {
   return {
     name: "John",
-    self: this
+    self: this,
   };
 }
 
